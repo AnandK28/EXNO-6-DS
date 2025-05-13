@@ -1,5 +1,3 @@
-# EXNO-6-DS-DATA VISUALIZATION USING SEABORN LIBRARY
-
 # Aim:
   To Perform Data Visualization using seaborn python library for the given datas.
 
@@ -23,29 +21,29 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+```
+```
 x = [1, 2, 3, 4, 5]
 y = [3, 6, 2, 7, 1]
 sns.lineplot(x=x,y=y)
 ```
-![Screenshot 2025-05-07 105159](https://github.com/user-attachments/assets/5e3850e5-2929-4919-a98e-7e6e9f49c6b4)
-
+![image](https://github.com/user-attachments/assets/f654d15c-f28b-4a3d-b1a6-a091430b12f1)
 ```
 df = sns.load_dataset("tips")
 df
 ```
-![Screenshot 2025-05-07 154811](https://github.com/user-attachments/assets/64c12530-3ed5-418f-a5d1-34f3ee05e00a)
-
-
+![image](https://github.com/user-attachments/assets/5cd1f4fd-68c3-4963-a957-40c92314f04f)
 ```
 sns.lineplot(x="total_bill",y="tip", data=df, hue="sex", linestyle='solid', legend="auto")
 ```
-![Screenshot 2025-05-07 105349](https://github.com/user-attachments/assets/114af95e-8b25-42bb-bee1-36ab28e0fe63)
-
+![image](https://github.com/user-attachments/assets/8cdb2fd3-fc63-48ae-84c8-c46356b3a30d)
 ```
 x=[1, 2, 3, 4, 5]
 y1=[3, 5, 2, 6, 1]
 y2=[1, 6, 4, 3, 8]
 y3=[5, 2, 7, 1, 4]
+```
+```
 sns.lineplot(x=x, y=y1)
 sns.lineplot(x=x, y=y2)
 sns.lineplot(x=x, y=y3)
@@ -53,8 +51,7 @@ plt.title("Multi-Line Plot")
 plt.xlabel('X Label')
 plt.ylabel("Y Label")
 ```
-![Screenshot 2025-05-07 105450](https://github.com/user-attachments/assets/b2157f1e-97ca-4281-a4f7-6ff64d78b8bb)
-
+![image](https://github.com/user-attachments/assets/74326e23-f6cd-4383-b54d-262c18361e11)
 ```
 tips=sns.load_dataset('tips')
 avg_total_bill = tips.groupby('day')['total_bill'].mean()
@@ -67,25 +64,24 @@ plt.ylabel('Amount')
 plt.title('Average Total Bill and Tip by Day')
 plt.legend()
 ```
-![Screenshot 2025-05-07 105716](https://github.com/user-attachments/assets/b525d94c-0c43-405e-9acd-ff48bb830fcf)
-
+![image](https://github.com/user-attachments/assets/67727123-28e6-4c39-9b00-95f2f954c5ed)
 ```
-avg_total_bill = tips.groupby('time')['total_bill'].mean() 
+avg_total_bill = tips.groupby('time')['total_bill'].mean()
 avg_tip=tips.groupby('time') ['tip'].mean()
 p1= plt.bar(avg_total_bill.index, avg_total_bill, label='Total Bill', width=0.4)
 p2 = plt.bar(avg_tip.index,avg_tip,bottom=avg_total_bill,label='Tip', width=0.4)
 ```
-![Screenshot 2025-05-07 110157](https://github.com/user-attachments/assets/e5ab1a93-9fd5-4894-91f7-a3b37fa2a797)
-
+![image](https://github.com/user-attachments/assets/e1263036-b99f-4430-b7f6-2aed77b0feda)
 ```
 years=range(2000, 2012)
-apples=[0.895, 0.91, 0.919, 0.926, 0.929, 0.931, 0.934, 0.936, 0.937, 0.9375, 0.9372, 0.939] 
+apples=[0.895, 0.91, 0.919, 0.926, 0.929, 0.931, 0.934, 0.936, 0.937, 0.9375, 0.9372, 0.939]
 oranges = [0.962, 0.941, 0.930, 0.923, 0.918, 0.908, 0.907, 0.904, 0.901, 0.898, 0.9, 0.896, ]
+```
+```
 plt.bar(years, apples)
 plt.bar(years, oranges, bottom=apples)
 ```
-![Screenshot 2025-05-07 110414](https://github.com/user-attachments/assets/93d3268c-804b-4a13-800f-de954fc16262)
-
+![image](https://github.com/user-attachments/assets/51050198-fe86-4b3e-a4ef-0e301063d449)
 ```
 import seaborn as sns
 dt= sns.load_dataset('tips')
@@ -94,28 +90,25 @@ plt.xlabel('Day of the Week')
 plt.ylabel("Total Bill")
 plt.title('Total Bill by Day and Gender')
 ```
-![Screenshot 2025-05-07 110516](https://github.com/user-attachments/assets/a26deb65-eafa-4727-806d-96b1dcd6ebbc)
-
+![image](https://github.com/user-attachments/assets/d14f9141-ee89-4fe7-a51b-12594e2298a7)
 ```
-tit=pd.read_csv("titanic_dataset.csv")
+import pandas as pd
+tit=pd.read_csv("/content/titanic_dataset.csv")
 tit
 ```
-![Screenshot 2025-05-07 110653](https://github.com/user-attachments/assets/8da1a4e5-b5f5-453d-94f6-aa3dd7bf2dab)
-
+![image](https://github.com/user-attachments/assets/01422c49-2a5d-4fb0-9fbb-7c4e0b3842dd)
 ```
 plt.figure(figsize=(8,5))
-sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow') 
+sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow')
 plt.title("Fare of Passenger by Embarked Town")
 ```
-![Screenshot 2025-05-07 110730](https://github.com/user-attachments/assets/4b7faeb6-4bdf-480c-8cd4-2f3dbc1cde66)
-
+![image](https://github.com/user-attachments/assets/1e7c31e2-4167-40a1-beef-a887866d31cb)
 ```
 plt.figure(figsize=(8,5))
-sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass') 
+sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass')
 plt.title("Fare of Passenger by Embarked Town, Divided by Class")
 ```
-![Screenshot 2025-05-07 110839](https://github.com/user-attachments/assets/0060be31-6942-4d2e-bf9c-e973963688c2)
-
+![image](https://github.com/user-attachments/assets/8da214b6-f26f-4a56-8e6f-bf2258332aaa)
 ```
 tips=sns.load_dataset('tips')
 sns.scatterplot(x='total_bill', y='tip', hue='sex', data=tips)
@@ -123,103 +116,78 @@ plt.xlabel('Total Bill')
 plt.ylabel("Tip Amount")
 plt.title('Scatter Plot of Total Bill vs. Tip Amount')
 ```
-![Screenshot 2025-05-07 110918](https://github.com/user-attachments/assets/6bd8a4c2-801f-4c25-bb57-f687d58c6c2c)
-
+![image](https://github.com/user-attachments/assets/0439468e-0463-4992-a1ed-eb113cc1c52e)
 ```
 num_var = np.random.randn(1000)
 num_var=pd.Series(num_var, name = "Numerical variable")
 num_var
 ```
-![Screenshot 2025-05-07 110949](https://github.com/user-attachments/assets/db156afe-ff62-42ae-b030-a04b83c327f8)
-
+![image](https://github.com/user-attachments/assets/25a34f2a-0921-4a21-b757-f1ccf9104850)
 ```
 sns.histplot(data = num_var, kde = True)
 ```
-![Screenshot 2025-05-07 111017](https://github.com/user-attachments/assets/29604c70-4cf3-43b8-b59d-cbfba626e730)
-
+![image](https://github.com/user-attachments/assets/7ed01ceb-dec4-4c22-97af-4c6e04c6d19e)
 ```
-df=pd.read_csv("titanic_dataset.csv")
+df=pd.read_csv("/content/titanic_dataset.csv")
 sns.histplot(data=df,x="Pclass", hue="Survived", kde=True)
 ```
-![Screenshot 2025-05-07 111112](https://github.com/user-attachments/assets/f9b8ffc4-7a23-4a99-9be0-6d71b208f079)
-
+![image](https://github.com/user-attachments/assets/31452360-c687-4f83-8dc3-40289265c6e8)
 ```
 tips=sns.load_dataset('tips')
 sns.boxplot(x=tips['day'], y=tips ['total_bill'], hue=tips['sex'])
 ```
-![Screenshot 2025-05-07 111224](https://github.com/user-attachments/assets/a8197864-3171-4dd6-a7dc-b4bf4a01b3ef)
-
+![image](https://github.com/user-attachments/assets/4c21c519-3c45-4a7d-911e-8ea7baf0fada)
 ```
 sns.boxplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, boxprops={"facecolor": "lightblue", "edgecolor": "darkblue"},
 whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
 ```
-![Screenshot 2024-10-26 225012](https://github.com/user-attachments/assets/2108fe27-773d-4462-8bfe-c7beb1480f24)
-
+![image](https://github.com/user-attachments/assets/2f096384-fe80-41aa-8aab-87c45559515b)
 ```
 sns.violinplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, palette="Set3", inner="quartile")
 plt.xlabel("Day of the Week")
 plt.ylabel("Total Bill")
 plt.title("Violin Plot of Total Bill by Day and Smoker Status")
 ```
-![Screenshot 2024-10-26 225101](https://github.com/user-attachments/assets/473bb020-5683-4b70-a37f-08cced58c6b6)
-
+![image](https://github.com/user-attachments/assets/43e14a8e-d4db-462d-b39e-b851e19743d1)
 ```
-import seaborn as sns
-sns.set(style = 'whitegrid')
-tip = sns.load_dataset('tips') 
-tips = sns.load_dataset("tips")
-sns.violinplot(x="tip", y="day", data=tip)
-```
-![Screenshot 2024-10-26 225524](https://github.com/user-attachments/assets/7edd4779-f3ac-4316-88b1-eaf351738186)
-
-```
-mart=pd.read_csv("titanic_dataset.csv")
+mart=pd.read_csv("/content/titanic_dataset.csv")
 mart
 ```
-![Screenshot 2024-10-26 225607](https://github.com/user-attachments/assets/839d4a31-8d9e-4654-b9ad-67cf667ece64)
-
+![image](https://github.com/user-attachments/assets/604a63e4-a508-4b6c-b326-f7498dfb5fc5)
 ```
-mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']] 
+mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']]
 mart.head(10)
 ```
-![Screenshot 2024-10-26 225637](https://github.com/user-attachments/assets/dd083a1c-994f-48d8-a920-c52410dcd632)
-
-```
-sns.kdeplot(data=mart,x='Age')
-```
-![Screenshot 2024-10-26 225727](https://github.com/user-attachments/assets/8903e364-c169-4058-b60e-2138f3d95872)
-
+![image](https://github.com/user-attachments/assets/fc13c0dc-9fbe-4be2-a297-25ebdc7b9c53)
 ```
 sns.kdeplot(data=mart,x='PassengerId')
 ```
-![Screenshot 2024-10-26 225752](https://github.com/user-attachments/assets/1b703a7b-7275-49d3-a269-a9447dc4a46b)
-
+![image](https://github.com/user-attachments/assets/d2b87439-1137-471e-a7a5-c06841372b47)
+```
+sns.kdeplot(data=mart,x='Age')
+```
+![image](https://github.com/user-attachments/assets/39dfcc3a-6b04-45c1-baf1-e868f63a7dbf)
 ```
 sns.kdeplot(data=mart)
 ```
-![Screenshot 2024-10-26 225823](https://github.com/user-attachments/assets/89b5bb5b-294f-410f-b922-93ed089c5048)
-
+![image](https://github.com/user-attachments/assets/9a8c5f45-4e3a-4921-9489-e5ce79c1b162)
 ```
 sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
 ```
-![Screenshot 2024-10-26 225935](https://github.com/user-attachments/assets/7ab0ca8a-9593-48c2-b2c9-7aa37800489d)
-
+![image](https://github.com/user-attachments/assets/1fbf5dfd-a5f6-4a6f-954f-a0cbe2551a2c)
 ```
 sns.kdeplot(data=mart,x='PassengerId',y='Survived')
 ```
-![Screenshot 2024-10-26 230008](https://github.com/user-attachments/assets/ff9f542b-cba5-4c9b-bfd5-14847f3fc33d)
-
+![image](https://github.com/user-attachments/assets/45828de0-2627-4dcc-b842-74413bf35df9)
 ```
 data = np.random.randint(low = 1, high = 100, size = (10,10))
 hm=sns.heatmap(data=data,annot=True)
 ```
-![Screenshot 2024-10-26 230043](https://github.com/user-attachments/assets/7d359c50-696c-445e-b0e6-af81985493f2)
-
+![image](https://github.com/user-attachments/assets/ba17a41f-81b2-459a-bfa9-676a66da195d)
 ```
 hm=sns.heatmap(data=data)
 ```
-![Screenshot 2024-10-26 230109](https://github.com/user-attachments/assets/9a5e922d-1133-4c70-8028-8abba02a5489)
-
+![image](https://github.com/user-attachments/assets/fa24237c-7805-487a-a1a7-dc2538a0d6fc)
 
 # Result:
-Thus, all the data visualization techniques of seaborn has been implemented.
+Thus, the Data Visualization using seaborn python library for the given data is implemented successfully.
